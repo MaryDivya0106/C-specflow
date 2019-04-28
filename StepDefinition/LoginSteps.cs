@@ -1,5 +1,8 @@
 ﻿using System;
 using TechTalk.SpecFlow;
+using Specflow.Global;
+using Specflow.pages;
+using NUnit.Framework;
 
 namespace Specflow.StepDefinition
 {
@@ -23,8 +26,10 @@ namespace Specflow.StepDefinition
         [When(@"I entered ""(.*)"", ""(.*)"" and clicked login button\.")]
         public void WhenIEnteredAndClickedLoginButton_(string p0, string p1)
         {
+            Common.ScreenShot.takeScreenShot(Driver.driver, "FIRST SCREENSHOT");
             //ScenarioContext.Current.Pending();
-            pages.Login.loginMethod(p0, p1);
+            Login.loginMethod(p0, p1);
+
         }
 
 
@@ -38,11 +43,19 @@ namespace Specflow.StepDefinition
         [Then(@"i have navigated to facebook home page\.")]
         public void ThenIHaveNavigatedToFacebookHomePage_()
         {
-            // ScenarioContext.Current.Pending();
-            //try
-            //{
-
-            //}
+          //  ScenarioContext.Current.Pending();
+            try
+            {
+                
+                Assert.AreEqual("(21) Facebook", Driver.driver.Title);
+               
+                Console.WriteLine("paassed");
+            }
+            catch (Exception ex)
+            {
+                Common.ScreenShot.takeScreenShot(Driver.driver, "FB fail");
+                Console.WriteLine("failed");
+            }
 
             Global.Driver.driver.Quit();
         }

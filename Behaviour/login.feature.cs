@@ -71,7 +71,7 @@ namespace Specflow.Behaviour
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("login to the facebook portal")]
-        [NUnit.Framework.TestCaseAttribute("bereddydivya@gmail.com", "1234567", null)]
+        [NUnit.Framework.TestCaseAttribute("bereddydivya@gmail.com", "Divyareddy0106", null)]
         [NUnit.Framework.TestCaseAttribute("divyareddy0106@gmail.com", "mary1234", null)]
         [NUnit.Framework.TestCaseAttribute("divya@gmail.com", "divz12345", null)]
         public virtual void LoginToTheFacebookPortal(string username, string password, string[] exampleTags)

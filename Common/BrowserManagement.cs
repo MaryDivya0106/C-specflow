@@ -13,7 +13,7 @@ namespace Specflow.Common
 {
     class BrowserManagement
     {
-        public static IWebDriver localdriver = Driver.driver;
+       // public static IWebDriver localdriver = Driver.driver;
         public static string Browser= Resource1.Browser;
         public static void BrowserAction()
         {

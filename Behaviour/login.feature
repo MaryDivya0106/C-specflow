@@ -6,6 +6,6 @@
 	Then i have navigated to facebook home page.
 	Examples:
 	         |username					|password|
-	         | bereddydivya@gmail.com   | 1234567 |
+	         | bereddydivya@gmail.com   | Divyareddy0106 |
 	         | divyareddy0106@gmail.com | mary1234      |
 	         | divya@gmail.com          | divz12345     |
