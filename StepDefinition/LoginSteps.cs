@@ -26,9 +26,11 @@ namespace Specflow.StepDefinition
         [When(@"I entered ""(.*)"", ""(.*)"" and clicked login button\.")]
         public void WhenIEnteredAndClickedLoginButton_(string p0, string p1)
         {
-            Common.ScreenShot.takeScreenShot(Driver.driver, "FIRST SCREENSHOT");
+
+            
             //ScenarioContext.Current.Pending();
             Login.loginMethod(p0, p1);
+            Common.ScreenShot.takeScreenShot(Driver.driver, "FIRST SCREENSHOT");
 
         }
 
@@ -46,6 +48,7 @@ namespace Specflow.StepDefinition
           //  ScenarioContext.Current.Pending();
             try
             {
+               
                 
                 Assert.AreEqual("(21) Facebook", Driver.driver.Title);
                

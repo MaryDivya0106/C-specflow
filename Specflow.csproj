@@ -72,6 +72,7 @@
     <Compile Include="Common\BrowserManagement.cs" />
     <Compile Include="Common\ExtenstionMethods.cs" />
     <Compile Include="Common\ScreenShot.cs" />
+    <Compile Include="Common\Wait.cs" />
     <Compile Include="Global\Driver.cs" />
     <Compile Include="pages\Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

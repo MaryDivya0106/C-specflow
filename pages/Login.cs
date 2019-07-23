@@ -14,15 +14,16 @@ namespace Specflow.pages
 {
     class Login
     {
-      // public static IWebDriver localdriver = BrowserManagement.localdriver;
+        // public static IWebDriver localdriver = BrowserManagement.localdriver;
         public static void loginMethod(string username, string password)
         {
-          
+            Common.Wait.WebDriverWait(Driver.driver, 30, "Xpath", "//input[@class='inputtext']");
             ExtenstionMethods.userinputs(Driver.driver, "Xpath", "//input[@class='inputtext']", username);
             ExtenstionMethods.userinputs(Driver.driver, "id", "pass", password);
-            
+
             ExtenstionMethods.ButtonClick(Driver.driver, "Xpath", "//label[@id='loginbutton']/input");
             Driver.driver.Navigate().Back();
         }
     }
 }
+
